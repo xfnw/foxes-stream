@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>foxes are allowed livestream</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="livestream player page">
+		<script src="/dist/dash.all.debug.js"></script>
+<style>
+html, body {
+	padding: 0;
+	margin: 0;
+}
+body {
+	max-width: 830px;
+	width: 100%;
+	margin: 0 auto;
+}
+video {
+	width: 100%;
+}
+</style>
+		<script>
+			function loadVideo(){
+			var player = dashjs.MediaPlayer().create();
+			player.initialize(document.querySelector("#stream"), '/tv/stream.mpd', true);
+						}
+		</script>
+	</head>
+	<body onload="loadVideo()">
+		<h1>foxes are allowed livestream</h1>
+		<video id="stream" controls></video>
+
+	</body>
+</html>
+
