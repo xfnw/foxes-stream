@@ -22,9 +22,10 @@ video {
 </style>
 		<script>
 			function loadVideo(){
-			var player = dashjs.MediaPlayer().create();
-			player.initialize(document.querySelector("#stream"), '/tv/stream.mpd', true);
-						}
+				var player = dashjs.MediaPlayer().create();
+				player.initialize(document.querySelector("#stream"), '/tv/stream.mpd', true);
+				player.updateSettings({ 'streaming': { 'lowLatencyEnabled': true }});
+			}
 		</script>
 	</head>
 	<body onload="loadVideo()">
@@ -33,4 +34,3 @@ video {
 
 	</body>
 </html>
-
