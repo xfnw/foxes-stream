@@ -24,7 +24,7 @@ video {
 			function loadVideo(){
 				var player = dashjs.MediaPlayer().create();
 				player.initialize(document.querySelector("#stream"), '/tv/stream.mpd', true);
-				player.updateSettings({ 'streaming': { 'lowLatencyEnabled': true }});
+				player.updateSettings({ 'streaming': { 'liveDelayFragmentCount': 1 }});
 			}
 		</script>
 	</head>
